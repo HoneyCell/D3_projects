@@ -1,7 +1,7 @@
 # D3_projects
 Integrated all D3.js projects we will be used in our web app
 
-### 1. cvs data visualization project (1st week iteration)
+### project1. cvs data visualization project (1st week iteration)
 - Overview: conceptualize and implement an interactive display of two data types
 - Achieved: </br>
   1. Display power and impedance waveforms in an informative and aesthetically pleasing manner.
