@@ -1,0 +1,122 @@
+svg, g {
+  pointer-events: all;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.title {
+  text-anchor: middle;
+  font-weight: 700;
+}
+
+
+
+.line {
+  fill: none;
+  stroke: darkblue;
+  stroke-width: 1.5px;
+}
+
+.linecircle {
+  fill: darkblue;
+}
+.linecircle:hover {
+  fill: darkblue;
+}
+
+
+
+/* Difference line */
+.differenceLine {
+  stroke: green;
+  stroke-dasharray: "10,10";
+  stroke-width: 2px;
+}
+
+.flag {
+  stroke: gray;
+  stroke-dasharray: 5;
+  stroke-width: 1.5;
+  display: none;
+  pointer-events: none;
+}
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.7;
+}
+.grid path {
+  stroke-width: 0;
+}
+
+
+/* Info tip */
+.infoTip {
+  pointer-events: none;
+  display: none;
+}
+.infoTip-border {
+  fill: #F3E4E4;
+  stroke: gray;        
+  stroke-width: 2;
+}
+
+
+
+/* Difference tip */
+.differenceTip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.differenceTip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.differenceTip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
+/* navigator */
+.navigator .area {
+    opacity: .3; 
+    fill: lightblue;
+    stroke-width: 0px;
+}
+
+/*.navigator .navLine0 {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.navigator .navLine1 {
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+}*/
+.navigator .viewport {
+    stroke: grey;
+    fill: black;
+    fill-opacity: 0.2;
+}
