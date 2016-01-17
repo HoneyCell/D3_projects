@@ -141,6 +141,41 @@ function createLines() {
                     showDifferenceTip(d);
                 });
 
+    var range_x = [];
+    slider();
+
+    /*
+      using jQuery to set up slider
+    */
+    function slider() {
+      // set up slider 
+      $("#slider-range-x").width(width);
+      $("#slider-range-x").css('margin-left', margin.left + 'px');
+
+      // slider function
+      $( "#slider-range-x" ).slider({
+        range: true,
+        min: d3.min(timeset),
+        max: d3.max(timeset),
+        values: [ d3.min(timeset), d3.max(timeset)],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( "$" + ui.values[0] + " - $" + ui.values[1] );
+          var x_index_min = parseInt(xScale(ui.values[0]));
+          var x_index_max = parseInt(xScale(ui.values[1]));
+          console.log("x_index_min " + x_index_min);
+          console.log("x_index_max " + x_index_max);
+          var newTimeset = timeset.slice(x_index_min, x_index_max+1);
+          console.log("length " + newTimeset.length);
+
+        }
+      });
+
+      $( "#amount" ).val( "$" + $( "#slider-range-x" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range-x" ).slider( "values", 1 ) );
+
+    };
+    
+
     /* 
       show Difference tip: show difference between two points
     */
@@ -233,41 +268,4 @@ function createLines() {
         .remove();
     }
    
-
-
-
-
-    var range_x = [];
-    slider();
-
-    /*
-      using jQuery to set up slider
-    */
-    function slider() {
-      // set up slider 
-      $("#slider-range-x").width(width);
-      $("#slider-range-x").css('margin-left', margin.left + 'px');
-
-      // slider function
-      $( "#slider-range-x" ).slider({
-        range: true,
-        min: d3.min(timeset),
-        max: d3.max(timeset),
-        values: [ d3.min(timeset), d3.max(timeset)],
-        slide: function( event, ui ) {
-          $( "#amount" ).val( "$" + ui.values[0] + " - $" + ui.values[1] );
-          var x_index_min = parseInt(xScale(ui.values[0]));
-          var x_index_max = parseInt(xScale(ui.values[1]));
-          console.log("x_index_min " + x_index_min);
-          console.log("x_index_max " + x_index_max);
-          var newTimeset = timeset.slice(x_index_min, x_index_max+1);
-          console.log("length " + newTimeset.length);
-
-        }
-      });
-
-      $( "#amount" ).val( "$" + $( "#slider-range-x" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range-x" ).slider( "values", 1 ) );
-
-    };
 }
