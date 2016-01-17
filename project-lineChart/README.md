@@ -7,4 +7,4 @@ In terminal:</br>
 >> python -m SimpleHTTPServer 8888 &
 </br>
 In browser:</br>
->> http://localhost:8888/PATH/TO/FILE/NinaWang.html
+>> http://localhost:8888/PATH/TO/FILE/lineChart.html
