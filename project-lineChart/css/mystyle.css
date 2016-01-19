@@ -14,20 +14,44 @@ svg, g {
 }
 
 
-
-.line {
+/* line 1 */
+.line0 {
   fill: none;
   stroke: darkblue;
   stroke-width: 1.5px;
 }
-
-.linecircle {
-  fill: darkblue;
-}
-.linecircle:hover {
-  fill: darkblue;
+.line0Select {
+  fill: none;
+  stroke: lightblue;
+  stroke-width: 1.5px;
 }
 
+.linecircle0 {
+  fill: darkblue;
+}
+.linecircle0:hover {
+  fill: darkblue;
+}
+
+/* line 2 */
+.line1 {
+  fill: none;
+  stroke: red;
+  stroke-width: 1.5px;
+}
+
+.line1Select {
+  fill: none;
+  stroke: lightred;
+  stroke-width: 1.5px;
+}
+
+.linecircle1 {
+  fill: red;
+}
+.linecircle1:hover {
+  fill: red;
+}
 
 
 /* Difference line */
